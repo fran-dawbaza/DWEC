@@ -5,28 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo 1, sitios donde escribir JS</title>
+    <!--
+        La inclusión de estilos se hace en el head o cabecera, así:
+        <link rel="stylesheet" href="style.css">
+
+        Para incluir estilos en el body o cuerpo, usaríamos la etiqueta style así:
+        <style>
+        @import "navigation.css"; /* Using a string, or @import url("navigation.css");  Using a url  */
+        </style>
+
+        Pero no es usual hacerlo de esta forma
+    -->
+
 </head>
 
 <body>
+    <!-- Ejemplo de botón con llamada a función. holaMundo() escribe en consola y en document se modifica su contenido completo. -->
     <h1>Esto es una cabecera</h1>
     <button onclick="holaMundo();" value="haz clic">Borra</button>
-    <h2 id="h2">Texto para modificar</h2>
+    <br />
 
+    <!-- Ejemplo de modificación de contenido en una etiqueta, en este caso modificamos el contenido de un título de nivel 2. -->
+    <h2 id="h2">Texto para modificar</h2>
     <button onclick="modificaH2();" value="haz clic">Cambia H2</button>
 
     <br />
-    <script src="js/app.js">
-    </script>
+    <!-- La inclusión en este punto de app.js no sería un problema en este caso,
+        para asegurar un correcto funcionamiento es mejor incluir app.js al final del documento,
+        justo antes de cerrar la etiqueta body.
+
+        <script src="js/app.js"></script>
+    -->
     <br />
+    <!--
+        Ejemplo de modificación del atributo de una etiqueta
+    -->
     <img id="gatitos" width="250px" onclick="cambiaImg();" src="https://www.purina.es/sites/g/files/mcldtz1656/files/2017-11/Bringing-Your-Kitten-Home_0.jpg" alt="">
     <br />
     <button onclick="cambiaImg();" value="haz clic">Cambia IMG</button>
     <br />
 
+    <!--
+        Ejemplo de modificación de estilos de una etiqueta
+    -->
     <p id="texto"> Texto para cambiar estilo</p>
     <br />
     <button onclick="cambiaEstilo();" value="haz clic">Cambia estilo</button>
-
+    <script src="js/app.js"></script>
 </body>
 
 </html>
