@@ -5,10 +5,11 @@ Los operadores ariméticos son los típicos:
 *
 /
 %
+++
+--
 
 El operador de asignación es el igual:
 =
-
 +=
 -=
 *=
