@@ -16,7 +16,7 @@ function modificaH2() {
 
 // Esta función modifica el atributo src de una imagen, dando efecto de conmutación entre dos imágenes
 // Usamos la variable booleana imgOriginal para saber si está mostrándose la imagen original
-let imgOriginal = true;
+var imgOriginal = true;
 
 function cambiaImg() {
     if (imgOriginal) {
