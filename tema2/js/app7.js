@@ -48,3 +48,9 @@ a = miCoche instanceof Coche // devuelve verdadero (true)
 b = miCoche instanceof Object // devuelve verdadero (true)
 
 console.log(a, b);
+
+let p = document.querySelector('p');
+p.addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log(e.target);
+})
