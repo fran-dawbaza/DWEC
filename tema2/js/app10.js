@@ -1,4 +1,6 @@
 /*
+
+
 let step;
 
 for (step = 0; step < 5; step++) {
@@ -10,7 +12,10 @@ try {
     salida.innerHTML += '<br>Ya me cansé, he caminado ' + step + ' pasos';
 } catch {
     salida.innerHTML += '<br>Sucedió un error!'
-}*/
+}
+
+Comento el ejemplo visto en clase y vamos con una solución al ejercio del rombo
+*/
 
 const dibujaRombo = evento => {
     
