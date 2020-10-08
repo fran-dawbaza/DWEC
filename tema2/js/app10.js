@@ -35,12 +35,15 @@ const dibujaRombo = evento => {
     // Si véis esta solución, implementar otra que no use el método repeat
     // así os obligo a usar bucles anidados
 
+    // Parte creciente
     for (let i=0; i<tope;i++){
         salida.innerHTML += espacio.repeat(num_espacios--);
         salida.innerHTML += asterisco.repeat(1+i*2);
         salida.innerHTML += '<br>';
     }
+
     num_espacios=1;
+    // Parte decreciente
     for (let i=tope-2; i>=0;i--){
         salida.innerHTML += espacio.repeat(num_espacios++);
         salida.innerHTML += asterisco.repeat(1+i*2);
