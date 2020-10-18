@@ -53,4 +53,5 @@ let p = document.querySelector('p');
 p.addEventListener('click', function(e) {
     e.preventDefault();
     console.log(e.target);
+    console.log(this);
 });
