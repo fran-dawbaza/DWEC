@@ -1,6 +1,4 @@
 /*
-
-
 let step;
 
 for (step = 0; step < 5; step++) {
@@ -18,17 +16,19 @@ Comento el ejemplo visto en clase y vamos con una solución al ejercio del rombo
 */
 
 const dibujaRombo = evento => {
-    
+    // Detenemos el envío del formulario
     evento.preventDefault();
 
     const tope = Number(document.getElementById('tamanio').value);
     const salida = document.getElementById('salida');
 
+    // Validamos el dato de entrada, el tamaño del rombo
     if (isNaN(tope) || tope < 1 || tope > 100){
         salida.innerHTML="Error, el tamaño indicado debe ser número entre 1 y 99";
         salida.style.color='red';
         return;
     }
+
     salida.style.color='blue';
     salida.innerHTML='';
 
