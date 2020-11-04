@@ -1,4 +1,8 @@
+// con console.time y console.timeEnd mostramos el tiempo trascurrido entre esas 2 llamadas
+
 console.time("tiempo de carga del diccionario");
+// diccionario.js sólo contiene la declaración del array diccionario y su exportación
+// a continuación importamos el array diccionario
 import { diccionario } from './diccionario.js';
 console.timeEnd("tiempo de carga del diccionario");
 
