@@ -58,13 +58,6 @@ const f_evento = function(e) {
 
 // Devuelve el primer objeto de tipo párrafo que encuentre
 let p = document.querySelector('p');
-<<<<<<< HEAD
-p.addEventListener('click', function(e) {
-    e.preventDefault();
-    console.log(e.target);
-    console.log(this);
-});
-=======
 
 // Asociamos al evento click la función f_evento
 p.addEventListener('click', f_evento);
@@ -72,4 +65,3 @@ p.addEventListener('click', f_evento);
 /*
 document.querySelector('p').addEventListener('click', function(e) { e.preventDefault(); console.log(e);});
 */
->>>>>>> 3fcf3e0fbeba33063d3a60ffed4cc4cbc92c2578
