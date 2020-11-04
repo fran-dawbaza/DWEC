@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import, export, module</title>
+</head>
+
+<body>
+    <h1>import, export, module</h1>
+    <p>Vamos a ver cómo trabajar con programación modular en javascript</p>
+    <p>Puedes acceder a la documentación en los enlaces:<br>
+        <ul>
+            <li>import: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import </a></li>
+            <li>export: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export </a></li>
+            <li>module: <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/M%C3%B3dulos" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/M%C3%B3dulos </a></li>
+        </ul>
+    </p>
+    <p>A modo de resumen, debes tener presente tres puntos principales para que funcione la importación de módulos:<br>
+        <ul>
+            <li>Usar type="module" en la etiqueta script para indicar que usaremos módulos</li>
+            <li>Usar export en las variables, constantes o funciones que queramos exportar desde el archivo .js que queramos importar</li>
+            <li>Usar import del archivo .js</li>
+        </ul>
+    </p>
+    <p>Esta misma página contiene un ejemplo de utilización, vamos a importar la constante "diccionario" que es un array de más de un millón y cuarto de palabras</p>
+    <p>Revisa el código fuente de esta página, para ver el uso del atributo type="module" en la etiqueta script. Mira también el código de js/app09.js y js/diccionario.js</p>
+    <script src="js/app09.js" type="module"></script>
+</body>
+
+</html>
