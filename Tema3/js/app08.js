@@ -118,4 +118,3 @@ console.log(JSON.stringify(unCocheES6));
 import { diccionario } from './diccionario.js';
 
 console.log("hay " + diccionario.length + " palabras en el diccionario");
-console.log(diccionario);
