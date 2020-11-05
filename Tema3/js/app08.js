@@ -111,10 +111,20 @@ const otroCocheES6 = new CocheES6('Renault', 'R6');
 console.log(unCocheES6);
 console.log(otroCocheES6.toString());
 
-console.log(JSON.stringify(unCocheES6));
 
 
+let cadena = JSON.stringify(unCocheES6);
+console.log("Con JSON.stringify convertimos un objeto en cadena, ejemplo: " + cadena);
+// de esta forma objeto contiene las propiedades originales, pero no los métodos de la clase CocheES6, ya que esa información no se guardó con JSON.stringify
+let objeto = JSON.parse(cadena);
+console.log("Con JSON.parse hacemos el paso inverso, convertimos una en cadena, ejemplo: ", `marca ${objeto.marca}, modelo ${objeto.modelo}, año ${objeto.año} `);
 
-import { diccionario } from './diccionario.js';
+// de esta forma obtengo un objeto de clase CocheES6, ya que le asigno la clase CocheES6 a los datos del objeto "objeto"
+// y podría acceder a los métodos tieneKM y toString
+let objetoCocheES6 = Object.assign(CocheES6.prototype, objeto); // también podría pasarle JSON.parse(cadena) en lugar de objeto
 
+<<<<<<< HEAD
 console.log("hay " + diccionario.length + " palabras en el diccionario");
+=======
+console.log("Con Object.assign  indicamos la clase para un objeto, ejemplo, obtenemos un objeto de la clase CocheES6: " + objetoCocheES6.toString());
+>>>>>>> 1eeaf083e0778428216fa5ff4fc227c9afaee84f
