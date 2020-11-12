@@ -1,12 +1,12 @@
-const sudoku =
+// const sudoku =
 
-    // leer el contenido de una celda, por ejemplo td23
+// leer el contenido de una celda, por ejemplo td23
 
 
 
-    function dimeCelda(i) {
-        return document.getElementById('td' + i).innerText;
-    }
+function dimeCelda(i) {
+    return document.getElementById('td' + i).innerText;
+}
 
 console.log(dimeCelda(22));
 console.log(dimeCelda(23));
