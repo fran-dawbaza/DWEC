@@ -1,0 +1,2695 @@
+@media screen and (max-width: 430px) {
+    .space20 {
+        margin-top: 10px;
+    }
+}
+
+.nouserselect {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -ms-user-select: none
+}
+
+h1 {
+    font-size: 24px
+}
+
+.maintab {
+    width: 980px
+}
+
+.fixedcell {
+    font-size: 24px
+}
+
+.varcell {
+    font-size: 24px
+}
+
+.cellnormal {
+    height: 43px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid blue;
+}
+
+@media (max-width:768px) {
+    .cellnormal {
+        height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: transparent;
+        cursor: pointer
+    }
+}
+
+.pencilmarkscell {
+    letter-spacing: 5px;
+    line-height: 13px
+}
+
+@media (max-width:768px) {
+    .pencilmarkscell {
+        letter-spacing: 4px;
+        line-height: 12px
+    }
+}
+
+.mobile-hide {
+    display: inline
+}
+
+.mobile-show {
+    display: none
+}
+
+.topgridmsg {
+    height: 25px;
+    font-size: 18px;
+    color: #000
+}
+
+@media (max-width:425px) {
+    .mobileline1 {
+        line-height: 1
+    }
+    .topgridmsg {
+        height: 25px;
+        font-size: 16px;
+        color: #000
+    }
+    #logo {
+        padding-top: 0
+    }
+    .mobile-hide {
+        display: none
+    }
+    .mobile-show {
+        display: inline
+    }
+    .pencilmarkscell {
+        letter-spacing: 3px;
+        line-height: 11px
+    }
+}
+
+@media (max-width:380px) {
+    .pencilmarkscell {
+        letter-spacing: 1px;
+        line-height: 11px
+    }
+    .cellnormal {
+        height: 38px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: transparent;
+        cursor: pointer
+    }
+    .fixedcell {
+        font-size: 21px
+    }
+    .varcell {
+        font-size: 21px
+    }
+}
+
+@media (max-width:345px) {
+    .cellnormal {
+        height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: transparent;
+        cursor: pointer
+    }
+    .pencilmarkscell {
+        letter-spacing: 1px;
+        line-height: 9px
+    }
+    .hintnumber {
+        font-size: 12px
+    }
+}
+
+.hintnumber {
+    color: green;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    background-color: transparent
+}
+
+.hintblank {
+    color: #00f;
+    font-size: 14px;
+    font-family: 'Courier New', monospace;
+    background-color: transparent
+}
+
+.smalliconimg {
+    width: 30px;
+    height: 25px
+}
+
+.indexfametoptd {
+    height: 38px;
+    text-align: center;
+    font-size: 22px;
+    color: #666;
+    background-repeat: no-repeat
+}
+
+.indexfameweektd1 {
+    height: 38px;
+    font-size: 18px;
+    color: #666;
+    background-color: #f6f6f6;
+    background-repeat: no-repeat
+}
+
+.indexfamemonthtd1 {
+    height: 38px;
+    font-size: 18px;
+    color: #666;
+    background-color: #e3e3e3;
+    background-repeat: no-repeat
+}
+
+.indexfamealltd1 {
+    height: 38px;
+    font-size: 18px;
+    color: #666;
+    background-color: #d8d5d5;
+    background-repeat: no-repeat
+}
+
+.indexfameweektd2 {
+    height: 28px;
+    font-size: 18px;
+    color: #666;
+    background-color: #f6f6f6;
+    background-repeat: no-repeat
+}
+
+.indexfamemonthtd2 {
+    height: 28px;
+    font-size: 18px;
+    color: #666;
+    background-color: #e3e3e3;
+    background-repeat: no-repeat
+}
+
+.indexfamealltd2 {
+    height: 28px;
+    font-size: 18px;
+    color: #666;
+    background-color: #d8d5d5;
+    background-repeat: no-repeat
+}
+
+.indexfameweektd3 {
+    height: 28px;
+    font-size: 18px;
+    color: #f59c10;
+    background-color: #f6f6f6;
+    background-repeat: no-repeat
+}
+
+.indexfamemonthtd3 {
+    height: 28px;
+    font-size: 18px;
+    color: #f59c10;
+    background-color: #e3e3e3;
+    background-repeat: no-repeat
+}
+
+.indexfamealltd3 {
+    height: 28px;
+    font-size: 18px;
+    color: #f59c10;
+    background-color: #d8d5d5;
+    background-repeat: no-repeat
+}
+
+.indexsingleboxopttd {
+    padding-left: 57px;
+    text-align: left;
+    width: 130px;
+    height: 33px;
+    background-image: url(https://cdn.livesudoku.com/artwork/singleboxbutton.png);
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.indexsingleboxopttdrtl {
+    padding-right: 57px;
+    text-align: right;
+    width: 130px;
+    height: 33px;
+    background-image: url(https://cdn.livesudoku.com/artwork/singleboxbuttonrtl.png);
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.indexmultiboxopttd {
+    text-align: center;
+    width: 184px;
+    height: 33px;
+    background-image: url(https://cdn.livesudoku.com/artwork/multiboxbutton.png);
+    background-repeat: no-repeat;
+    cursor: pointer
+}
+
+.oppcellnormal {
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #fff
+}
+
+.largegreytext {
+    color: #666;
+    font-size: 23px
+}
+
+.boldlargegreytext {
+    color: #666;
+    font-size: 23px;
+    font-weight: 700
+}
+
+.largeorangetext {
+    color: #f59c10;
+    font-size: 23px
+}
+
+.boldlargeorangetext {
+    color: #f59c10;
+    font-size: 23px;
+    font-weight: 700
+}
+
+.clicklargegreytext {
+    color: #666;
+    font-size: 23px
+}
+
+.clicklargegreytext:hover {
+    color: #f59c10
+}
+
+.normalgreytext {
+    color: #666;
+    font-size: 18px
+}
+
+.boldnormalgreytext {
+    color: #666;
+    font-size: 18px;
+    font-weight: 700
+}
+
+.normalorangetext {
+    color: #f59c10;
+    font-size: 18px
+}
+
+.boldnormalorangetext {
+    color: #f59c10;
+    font-size: 18px;
+    font-weight: 700
+}
+
+.clicknormalgreytext {
+    color: #666;
+    font-size: 18px;
+    cursor: pointer
+}
+
+.clicknormalgreytext:hover {
+    color: #f59c10
+}
+
+.smallgreytext {
+    color: #666;
+    font-size: 16px
+}
+
+.smallorangetext {
+    color: #f59c10;
+    font-size: 16px
+}
+
+.clicksmallgreytext {
+    color: #666;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.clicksmallgreytext:hover {
+    color: #f59c10
+}
+
+.clicksmallorangetext {
+    color: #f59c10;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.clicksmallorangetext:hover {
+    color: #666
+}
+
+.clicknormalorangetext {
+    color: #f59c10;
+    font-size: 18px
+}
+
+.clicknormalorangetext:hover {
+    color: #666
+}
+
+.margin0 {
+    margin: 0
+}
+
+.toplink {
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.toplink:hover {
+    color: #666
+}
+
+a.toplink:link {
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.toplink:visited {
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.toplink:hover {
+    color: #666;
+    text-decoration: underline
+}
+
+a.orangelink:link {
+    font-size: 18px;
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.orangelink:visited {
+    font-size: 18px;
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.orangelink:hover {
+    font-size: 18px;
+    color: #666;
+    text-decoration: underline
+}
+
+a.toplinkflag:link {
+    color: #000;
+    font-weight: 400;
+    text-decoration: none
+}
+
+a.toplinkflag:visited {
+    color: #000;
+    font-weight: 400;
+    text-decoration: none
+}
+
+a.toplinkflag:hover {
+    color: #666;
+    text-decoration: underline
+}
+
+.flagimg {
+    border: 1px solid #000;
+    width: 25px;
+    height: 13px
+}
+
+a.userlink:link {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none
+}
+
+a.userlink:visited {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none
+}
+
+a.userlink:hover {
+    color: #f59c10;
+    text-decoration: underline
+}
+
+.optionstdtextltr {
+    width: 220px;
+    text-align: left;
+    height: 26px
+}
+
+.optionstdtextwideltr {
+    width: 270px;
+    text-align: left;
+    height: 26px
+}
+
+.optionstdtextrtl {
+    width: 200px;
+    text-align: right;
+    height: 26px
+}
+
+.optionsradio {
+    height: 20px;
+    width: 20px
+}
+
+.optionstdopt {
+    text-align: left
+}
+
+.optionyes {
+    border: 2px solid #f59c10;
+    color: #666;
+    font-size: 18px;
+    display: inline;
+    cursor: pointer
+}
+
+.optionno {
+    border: 2px solid #eee;
+    color: #666;
+    font-size: 18px;
+    display: inline;
+    cursor: pointer
+}
+
+.optionnowhite {
+    border: 1px solid #666;
+    color: #666;
+    font-size: 18px;
+    display: inline;
+    cursor: pointer
+}
+
+a.indexfootlink:link {
+    color: #878786;
+    font-weight: 400;
+    text-decoration: none
+}
+
+a.indexfootlink:visited {
+    color: #878786;
+    font-weight: 400;
+    text-decoration: none
+}
+
+a.indexfootlink:hover {
+    color: #878786;
+    text-decoration: underline
+}
+
+a.indexfootlink2:link {
+    color: #000;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.indexfootlink2:visited {
+    color: #000;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.indexfootlink2:hover {
+    color: #e62a38;
+    text-decoration: underline
+}
+
+.norminput {
+    font-size: 18px;
+    font-family: arial
+}
+
+a.feat:link {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.feat:visited {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.feat:hover {
+    color: #f59c10;
+    text-decoration: none
+}
+
+.footerdiv {
+    font-size: 16px;
+    color: #878786;
+    text-align: center
+}
+
+a.indexplaysinglelink:link {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.indexplaysinglelink:visited {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.indexplaysinglelink:hover {
+    color: #f59c10;
+    text-decoration: none
+}
+
+a.indexplaymultilink:link {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.indexplaymultilink:visited {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.indexplaymultilink:hover {
+    color: #f59c10;
+    text-decoration: none
+}
+
+.avatarimg {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #fff
+}
+
+.gametextbutton {
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 27px;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer
+}
+
+.gametextbutton:hover {
+    color: #f59c10
+}
+
+.gamebutton {
+    font-size: 18px
+}
+
+.keystd1 {
+    width: 200px
+}
+
+.keystd2 {
+    width: 400px
+}
+
+.gametdsep {
+    line-height: 15px;
+    height: 15px
+}
+
+.cellwithhint {
+    line-height: 13px;
+    letter-spacing: 5px
+}
+
+.gamehighlightbox {
+    table-layout: fixed;
+    width: 250px;
+    height: 99px;
+    background-repeat: no-repeat
+}
+
+.gamecolorbox {
+    table-layout: fixed;
+    width: 250px;
+    height: 54px;
+    background-repeat: no-repeat
+}
+
+.gamecolordiv {
+    border: 2px solid #666;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    text-align: center
+}
+
+.gamehighlighttd {
+    width: 42px;
+    height: 37px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #666;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle
+}
+
+.gamehighlighttd:hover {
+    color: #f59c10
+}
+
+.gametimerbox {
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    color: #f59c10;
+    font-size: 18px
+}
+
+.gameiconbox {
+    height: 50px;
+    cursor: pointer
+}
+
+.gameiconimg {
+    width: 36px;
+    height: 36px;
+    border: 0
+}
+
+.inputbutton {
+    font-size: 18px
+}
+
+.keypadtd {
+    font-size: 20px;
+    height: 40px;
+    color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #666;
+    cursor: pointer
+}
+
+.keypadtd2 {
+    font-size: 20px;
+    height: 19px;
+    color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #666;
+    cursor: pointer
+}
+
+.winclosebutton {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    color: gray;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    font-weight: 700
+}
+
+.winclosebutton:hover {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    color: #e62a38;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    font-weight: 700
+}
+
+.gameprintwintd {
+    color: #333;
+    font-size: 20px;
+    cursor: pointer
+}
+
+.changelogtd {
+    vertical-align: top;
+    text-align: left
+}
+
+.jqmWindow {
+    display: none;
+    position: fixed;
+    top: 95px;
+    left: 50%;
+    margin-left: -360px;
+    width: 740px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000
+}
+
+.largejqmWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -420px;
+    margin-top: -315px;
+    width: 840px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000;
+    text-align: center
+}
+
+.mediumjqmWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -320px;
+    margin-top: -215px;
+    width: 640px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000;
+    text-align: center
+}
+
+.smalljqmWindow {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -270px;
+    margin-top: -215px;
+    width: 540px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000;
+    text-align: center
+}
+
+.jqmWindowMobile {
+    display: none;
+    position: fixed;
+    top: 95px;
+    left: 50%;
+    margin-left: -155px;
+    width: 310px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000
+}
+
+.largejqmWindowMobile {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -155px;
+    margin-top: -315px;
+    width: 310x;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000;
+    text-align: center
+}
+
+.mediumjqmWindowMobile {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -155px;
+    margin-top: -215px;
+    width: 310px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000;
+    text-align: center
+}
+
+.smalljqmWindowMobile {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -155px;
+    margin-top: -215px;
+    width: 310px;
+    background-color: #fff;
+    color: #333;
+    border: 4px solid #bfbfbf;
+    padding: 0;
+    z-index: 30000;
+    text-align: center
+}
+
+.jqmOverlay {
+    background-color: #000
+}
+
+* iframe.jqm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: expression(this.parentNode.offsetWidth+'px');
+    height: expression(this.parentNode.offsetHeight+'px')
+}
+
+* html .jqmWindow {
+    position: absolute;
+    top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px')
+}
+
+* html .smalljqmWindow {
+    position: absolute;
+    top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px')
+}
+
+* html .mediumjqmWindow {
+    position: absolute;
+    top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px')
+}
+
+* html .largejqmWindow {
+    position: absolute;
+    top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px')
+}
+
+#hintbox {
+    position: absolute;
+    top: 0;
+    background-color: #ffffe0;
+    width: 150px;
+    padding: 3px;
+    border: 1px solid #000;
+    font: normal 12px Arial;
+    line-height: 18px;
+    z-index: 30001;
+    border-right: 3px solid #000;
+    border-bottom: 3px solid #000;
+    visibility: hidden
+}
+
+.hintanchor {
+    font-weight: 400;
+    color: #666;
+    margin: 3px 8px
+}
+
+.helpmenutopic {
+    color: #444;
+    font-size: 19px;
+    font-weight: 700
+}
+
+.helpcheckboximg {
+    width: 15px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 7px
+}
+
+.helpimg {
+    max-width: 453px;
+    height: auto;
+    width: 100%;
+    border: 0
+}
+
+.helpimg2 {
+    max-width: 394px;
+    height: auto;
+    width: 100%;
+    border: 0
+}
+
+.helpslidetable {
+    border: 0;
+    width: 760px
+}
+
+.helpslidelefttd {
+    width: 271px;
+    vertical-align: top;
+    padding-top: 28px
+}
+
+.helpsliderighttd {
+    width: 469px;
+    vertical-align: top;
+    padding-top: 14px
+}
+
+.helpslidelefttd2 {
+    width: 341px;
+    vertical-align: top;
+    padding-top: 28px
+}
+
+.helpsliderighttd2 {
+    width: 399px;
+    vertical-align: top;
+    padding-top: 14px
+}
+
+.paginationstyle {
+    font-size: 15px
+}
+
+.paginationstyle a {
+    text-decoration: none;
+    color: #666
+}
+
+.paginationstyle a.selected,
+.paginationstyle a:hover {
+    color: #000
+}
+
+.paginationstyle a.disabled,
+.paginationstyle a.disabled:hover {
+    color: #ccc;
+    cursor: default
+}
+
+.paginationstyle a.imglinks {
+    border: 0;
+    padding: 0
+}
+
+.paginationstyle a.imglinks img {
+    vertical-align: bottom;
+    border: 0
+}
+
+.paginationstyle a.imglinks a:hover {
+    background: 0 0
+}
+
+.paginationstyle .flatview a.selected,
+.paginationstyle .flatview a:hover {
+    color: #000;
+    background-color: #ff0
+}
+
+.checkspan {
+    display: inline
+}
+
+.tur {
+    color: red
+}
+
+.tub {
+    color: #00f
+}
+
+.bg-statsplayrtl {
+    width: 22px;
+    height: 22px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -276px -301px
+}
+
+.bg-multisudoku {
+    width: 130px;
+    height: 155px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -10px -249px
+}
+
+.bg-singlesudoku {
+    width: 235px;
+    height: 219px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -10px -10px
+}
+
+.bg-singlesudokurtl {
+    width: 235px;
+    height: 219px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -265px -10px
+}
+
+.bg-facebooklogin {
+    width: 133px;
+    height: 32px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -160px -249px
+}
+
+.bg-flags_es {
+    width: 30px;
+    height: 16px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -363px -249px
+}
+
+.bg-flags_he {
+    width: 30px;
+    height: 16px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -413px -249px
+}
+
+.bg-flags_us {
+    width: 30px;
+    height: 16px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -463px -249px
+}
+
+.bg-learnicon {
+    width: 54px;
+    height: 54px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -160px -301px
+}
+
+.bg-multiicon {
+    width: 50px;
+    height: 56px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -10px -424px
+}
+
+.bg-singleicon {
+    width: 50px;
+    height: 56px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -80px -424px
+}
+
+.bg-statsplay {
+    width: 22px;
+    height: 22px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -234px -301px
+}
+
+.bg-statsicon {
+    width: 30px;
+    height: 25px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -313px -249px
+}
+
+.game-statsplayrtl {
+    width: 22px;
+    height: 22px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -386px -174px
+}
+
+.game-gamebuttonrtl_250 {
+    width: 250px;
+    height: 27px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -280px -10px
+}
+
+.game-statsplay {
+    width: 22px;
+    height: 22px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -507px -104px
+}
+
+.game-statsicon {
+    width: 30px;
+    height: 25px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -336px -174px
+}
+
+.game-gameiconundo {
+    width: 36px;
+    height: 36px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -451px -104px
+}
+
+.game-gameiconpause {
+    width: 36px;
+    height: 36px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -280px -174px
+}
+
+.game-gametimebox {
+    width: 91px;
+    height: 50px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -280px -104px
+}
+
+.game-gamebutton_250 {
+    width: 250px;
+    height: 27px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -280px -57px
+}
+
+.game-gameiconprint {
+    width: 40px;
+    height: 50px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -391px -104px
+}
+
+.game-multisudoku {
+    width: 130px;
+    height: 155px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -10px -129px
+}
+
+.game-gamehighlightbox_250 {
+    width: 250px;
+    height: 99px;
+    background: url(https://cdn.livesudoku.com/artwork/sudoku-game-sprite-min.png) -10px -10px
+}
+
+.btn-circle {
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.42;
+    border-radius: 15px
+}
+
+.h1gamepage {
+    font-weight: 400;
+    display: inline;
+    color: #666;
+    font-size: 18px
+}
+
+.sudoku_base_adslot_1 {
+    width: 320px;
+    height: 50px;
+    max-height: 100px
+}
+
+@media (min-width:700px) {
+    .sudoku_base_adslot_1 {
+        width: 728px;
+        height: 90px
+    }
+}
+
+@media (min-width:1000px) {
+    .sudoku_base_adslot_1 {
+        width: 160px;
+        height: 600px;
+        max-height: 800px
+    }
+}
+
+.homepage_adslot_2 {
+    width: 320px;
+    height: 100px;
+    max-height: 100px
+}
+
+@media (min-width:700px) {
+    .homepage_adslot_2 {
+        width: 728px;
+        height: 90px
+    }
+}
+
+@media (min-width:1000px) {
+    .homepage_adslot_2 {
+        width: 970px;
+        height: 90px
+    }
+}
+
+.a2a_count,
+.a2a_svg {
+    border-radius: 0!important
+}
+
+@media screen and (max-width:980px) {
+    .a2a_floating_style.a2a_vertical_style {
+        display: none
+    }
+}
+
+.a2a_floating_style {
+    margin: 0;
+    padding: 0
+}
+
+.a2a_vertical_style a {
+    padding: 0;
+    margin: 0
+}
+
+#CV_CELL_WRAP {
+    font-family: sans-serif;
+    font-size: 80%;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    height: 30px;
+    width: 75px;
+    display: block
+}
+
+#CV_NUM {
+    cursor: pointer;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    padding: .3em;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 400;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 15px;
+    display: inline-block
+}
+
+#CV_ICON {
+    line-height: 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 400;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    padding: .3em;
+    padding-right: .5em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: .36em
+}
+
+#CV_BG {
+    font-family: sans-serif;
+    font-size: 80%;
+    line-height: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #c00;
+    opacity: 1
+}
+
+#CV {
+    font-family: sans-serif;
+    font-size: 80%;
+    -webkit-tap-highlight-color: transparent;
+    line-height: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    height: 30px;
+    width: 75px;
+    display: block
+}
+
+#CV_WRAPPER {
+    line-height: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    display: table;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 13px;
+    font-family: sans-serif;
+    font-weight: 400
+}
+
+#btn-game-desktop1 {
+    width: 32px;
+    padding-left: 10px
+}
+
+#btn-game-desktop2-box {
+    width: 32px;
+    padding-left: 10px
+}
+
+#game-top-buttons {
+    height: 54px;
+    margin: 0;
+    padding-left: 5px;
+    padding-right: 0
+}
+
+.sudoku_base_adslot_2 {
+    width: 250px;
+    height: 250px;
+    max-width: 250px
+}
+
+@media screen and (max-width: 430px) {
+    .space20 {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .space20 {
+        margin-top: 10px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 0;
+    background-color: #fff;
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    -webkit-appearance: none
+}
+
+.sudokucell46 {
+    width: 46px
+}
+
+.sudokucell45 {
+    width: 45px
+}
+
+.sudokucell44 {
+    width: 44px
+}
+
+.sudokucell43 {
+    width: 43px
+}
+
+.stattdtitle {
+    font-size: 15px;
+    color: #666;
+    text-align: left
+}
+
+.stattdbody1 {
+    height: 36px;
+    background-color: #f6f6f6;
+    font-size: 15px;
+    color: #595959
+}
+
+.stattdbody2 {
+    height: 36px;
+    background-color: #e3e3e3;
+    font-size: 15px;
+    color: #595959
+}
+
+.staticon {
+    border: 0;
+    width: 22px;
+    height: 22px
+}
+
+.mystath {
+    height: 36px;
+    background-color: #f6f6f6;
+    text-align: left;
+    font-size: 14px;
+    color: #595959;
+    padding-left: 5px;
+    font-weight: 700;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999
+}
+
+.mystat0 {
+    height: 36px;
+    background-color: #f6f6f6;
+    text-align: center;
+    padding-left: 5px;
+    font-size: 20px;
+    color: #595959
+}
+
+.mystat1 {
+    height: 36px;
+    background-color: #f6f6f6;
+    text-align: left;
+    padding-left: 5px;
+    font-size: 15px;
+    color: #595959
+}
+
+.mystat2 {
+    height: 36px;
+    background-color: #e3e3e3;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 5px;
+    color: #595959;
+    border-bottom: 1px solid #999
+}
+
+.mystat1b {
+    height: 36px;
+    background-color: #f6f6f6;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 5px;
+    color: #595959;
+    border-bottom: 1px solid #999
+}
+
+.mystat2b {
+    height: 36px;
+    background-color: #e3e3e3;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 5px;
+    color: #595959;
+    border-bottom: 1px solid #999
+}
+
+.histattdtitle {
+    height: 32px;
+    background-color: #f6f6f6;
+    text-align: left;
+    font-size: 18px;
+    color: #595959
+}
+
+.histattdbody1 {
+    height: 32px;
+    background-color: #f6f6f6;
+    text-align: left;
+    font-size: 15px;
+    color: #595959
+}
+
+.histattdbody2 {
+    height: 32px;
+    background-color: #e3e3e3;
+    text-align: left;
+    font-size: 15px;
+    color: #595959
+}
+
+.histattdbody1h {
+    height: 32px;
+    background-color: #f6f6f6;
+    text-align: left;
+    font-size: 15px;
+    color: #f59c10
+}
+
+.histattdbody2h {
+    height: 32px;
+    background-color: #e3e3e3;
+    text-align: left;
+    font-size: 15px;
+    color: #f59c10
+}
+
+body {
+    font-family: Lato, sans-serif, 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    width: 100%;
+    height: 100%!important;
+    background-color: #fff
+}
+
+html {
+    width: 100%;
+    height: 100%!important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+
+@media (max-width:767px) {
+    body {
+        word-wrap: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto
+    }
+}
+
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Lato, sans-serif;
+    line-height: 1;
+    color: inherit
+}
+
+p {
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    margin: 0 0 10px
+}
+
+a {
+    font-family: Lato, sans-serif;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.f12 {
+    font-size: 12px
+}
+
+.f13 {
+    font-size: 13px
+}
+
+.f14 {
+    font-size: 14px
+}
+
+.f15 {
+    font-size: 15px
+}
+
+.f16 {
+    font-size: 16px
+}
+
+.f17 {
+    font-size: 17px
+}
+
+.f18 {
+    font-size: 18px
+}
+
+.f19 {
+    font-size: 19px
+}
+
+.f20 {
+    font-size: 20px
+}
+
+.f21 {
+    font-size: 21px
+}
+
+.f22 {
+    font-size: 22px
+}
+
+.f23 {
+    font-size: 23px
+}
+
+.f24 {
+    font-size: 24px
+}
+
+.f25 {
+    font-size: 25px
+}
+
+.f26 {
+    font-size: 26px
+}
+
+.f40 {
+    font-size: 40px
+}
+
+.font100 {
+    font-weight: 100
+}
+
+.font200 {
+    font-weight: 200
+}
+
+.font300 {
+    font-weight: 300
+}
+
+.font400 {
+    font-weight: 400
+}
+
+.font500 {
+    font-weight: 500
+}
+
+.font600 {
+    font-weight: 600
+}
+
+.font700 {
+    font-weight: 700
+}
+
+.font900 {
+    font-weight: 900
+}
+
+.italic {
+    font-style: italic
+}
+
+.bold {
+    font-weight: 700
+}
+
+.space0 {
+    margin-top: 0!important
+}
+
+.space5 {
+    margin-top: 5px!important
+}
+
+.space10 {
+    margin-top: 10px!important
+}
+
+.space12 {
+    margin-top: 12px!important
+}
+
+.space15 {
+    margin-top: 15 px!important
+}
+
+.space20 {
+    margin-top: 20px!important
+}
+
+.space25 {
+    margin-top: 25px!important
+}
+
+.space30 {
+    margin-top: 30px!important
+}
+
+.space40 {
+    margin-top: 40px!important
+}
+
+.space50 {
+    margin-top: 50px!important
+}
+
+.space60 {
+    margin-top: 60px!important
+}
+
+.space70 {
+    margin-top: 70px!important
+}
+
+.space80 {
+    margin-top: 80px!important
+}
+
+.space90 {
+    margin-top: 90px!important
+}
+
+.space100 {
+    margin-top: 100px!important
+}
+
+.no-space {
+    margin: 0!important;
+    padding: 0!important
+}
+
+.margin-left-0 {
+    margin-left: 0!important
+}
+
+.margin-right-0 {
+    margin-right: 0!important
+}
+
+.padding-left-0 {
+    padding-left: 0!important
+}
+
+.padding-right-0 {
+    padding-right: 0!important
+}
+
+.m-auto {
+    margin: 0 auto
+}
+
+.text-white {
+    color: #fff!important
+}
+
+.blackclr {
+    color: #000!important
+}
+
+.text-blue {
+    color: #19467d!important
+}
+
+.underline {
+    text-decoration: underline
+}
+
+#logo {
+    background: url(https://cdn.livesudoku.com/artwork/headerbackground-resp-min.jpg) no-repeat;
+    background-size: cover;
+    border-bottom: 1px solid #fff
+}
+
+.logo-add p {
+    font-size: 17px;
+    color: #1b95e0;
+    padding: 25px 0
+}
+
+.logo-add p a {
+    color: #1b95e0
+}
+
+.logo-add p a:hover {
+    color: #666;
+    text-decoration: underline
+}
+
+.tutorial {
+    padding-top: 25px
+}
+
+.tutorial li a {
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline;
+    font-size: 17px;
+    position: relative
+}
+
+@media (max-width:576px) {
+    .tutorial li a {
+        font-size: 15px
+    }
+}
+
+.tutorial li a:hover {
+    color: #666
+}
+
+.tutorial li a:after {
+    content: "|";
+    position: absolute;
+    right: -34px;
+    bottom: -2px;
+    width: 30px;
+    color: #f59c10
+}
+
+.display-after-none a:after {
+    display: none
+}
+
+.btn-blue {
+    background: #4267b2;
+    border: 1px solid #4267b2;
+    color: #fff;
+    padding: 2px 10px;
+    font-size: 11px
+}
+
+.btn-blue:hover {
+    background: #365899;
+    color: #fff;
+    border: 1px solid #365899
+}
+
+.btn-sky {
+    background: #1b95e0;
+    border: 1px solid #1b95e0;
+    color: #fff;
+    padding: 2px 10px;
+    font-size: 11px
+}
+
+.btn-sky:hover {
+    background: #0c7abf;
+    color: #fff;
+    border: 1px solid #0c7abf
+}
+
+#main-contain {
+    background: url(https://cdn.livesudoku.com/artwork/bg-gray-min.png) no-repeat #fff;
+    padding: 20px 0
+}
+
+@media (min-width:576px) {
+    .gray-box {
+        background: #f0f0f0;
+        box-shadow: inset 1px 1px 1px 1px #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px 10px 15px 20px
+    }
+}
+
+@media (max-width:576px) {
+    #main-contain {
+        background: url(https://cdn.livesudoku.com/artwork/bg-gray-min.png) no-repeat #fff;
+        padding: 5px 0
+    }
+    #logo {
+        padding-top: 0
+    }
+    .xs-center {
+        text-align: center
+    }
+    .gray-box {
+        background: #f0f0f0;
+        box-shadow: inset 1px 1px 1px 1px #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px 10px 10px 10px
+    }
+}
+
+.white-box {
+    background: #fff;
+    box-shadow: inset 1px 1px 1px 1px #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 10px 15px 20px
+}
+
+@media (min-width:576px) {
+    .online-sudoku .media-body {
+        padding-left: 20px
+    }
+}
+
+@media (max-width:768px) {
+    .padding-top-mobile {
+        padding-top: 6px;
+        padding-left: 0;
+        padding-right: 0
+    }
+    .sudokucell46 {
+        width: 36px
+    }
+    .sudokucell45 {
+        width: 35px
+    }
+    .sudokucell44 {
+        width: 34px
+    }
+    .sudokucell43 {
+        width: 33px
+    }
+}
+
+.online-sudoku .media-body h3,
+h1,
+h2,
+h4 {
+    color: #666;
+    margin-top: 15px;
+    font-size: 24px
+}
+
+.btn-trans {
+    background: #f0f0f0;
+    border-color: #fff;
+    box-shadow: 0 1px 6px 0 #ccc;
+    color: #666;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 3px;
+    width: 100%;
+    padding: 1px 12px;
+    text-align: left
+}
+
+.btn-loggedin {
+    background: #f0f0f0;
+    color: #666;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    width: 70%;
+    padding: 1px 12px;
+    text-align: left
+}
+
+@media (min-width:576px) {
+    .btn-trans:hover {
+        color: #f59c10
+    }
+}
+
+.btn-trans:hover:after {
+    color: #fff
+}
+
+.play-icon {
+    padding-right: 20px;
+    color: #f59c10
+}
+
+.text-yellow {
+    color: #f59c10
+}
+
+.text-gry {
+    color: #666
+}
+
+.gray-box1 {
+    background: #e3e3e3;
+    box-shadow: inset 1px 1px 1px 1px #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 20px 15px 20px
+}
+
+.gray-box1 .btn-trans {
+    text-align: center;
+    padding: 3px 12px;
+    font-size: 18px
+}
+
+.learn-work .gray-box {
+    padding: 10px 15px
+}
+
+.width37 {
+    width: 37%
+}
+
+.line:before {
+    content: "";
+    position: absolute;
+    border-left: 1px solid #ccc;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    right: 0
+}
+
+.btn-gray {
+    background: #e3e3e3;
+    border: 2px solid #fff;
+    box-shadow: none;
+    color: #666;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 3px;
+    width: 100%;
+    padding: 3px 12px;
+    text-align: center
+}
+
+.btn-gray:hover {
+    color: #f59c10
+}
+
+.win a:hover {
+    color: #f59c10;
+    text-decoration: underline
+}
+
+.fb-social a:hover {
+    opacity: .8
+}
+
+.bg-gry {
+    background: #e2e2e2
+}
+
+#data .gray-box {
+    background: #f0f0f0;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    padding: 5px 10px 5px 20px
+}
+
+#data .table thead {
+    margin-top: 4px
+}
+
+#data .table tbody td {
+    padding-left: 15px
+}
+
+#data .table {
+    background: #f0f0f0;
+    font-size: 16px;
+    margin-bottom: 4px
+}
+
+.bg-gry .win {
+    padding: 10px 10px;
+    font-size: 16px;
+    height: 42px
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 4px solid #fff
+}
+
+#quote {
+    padding: 15px 0
+}
+
+#quote h4 {
+    line-height: 25px;
+    color: #545454;
+    font-weight: 500
+}
+
+.data1 a {
+    color: #666
+}
+
+.data1 a:hover {
+    color: #f59c10;
+    text-decoration: underline
+}
+
+#ft {
+    background: url(https://cdn.livesudoku.com/artwork/footer-resp-min.jpg) no-repeat;
+    background-size: cover;
+    padding: 120px 0 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-position: 50% 100%
+}
+
+#footer {
+    background: #fff;
+    background-size: cover;
+    padding: 0 0 20px
+}
+
+#footer ul li a {
+    color: #666;
+    font-size: 18px;
+    position: relative
+}
+
+#footer li a:after {
+    content: "|";
+    position: absolute;
+    right: -22px;
+    bottom: -1px;
+    width: 30px;
+    height: 26px;
+    color: #666
+}
+
+#footer li:nth-child(11) a:after,
+#footer li:nth-child(6) a:after {
+    display: none
+}
+
+#footer p {
+    color: #666;
+    font-size: 16px
+}
+
+#footer p a {
+    font-size: 16px;
+    color: #666
+}
+
+#footer p a:hover {
+    color: #f12;
+    text-decoration: underline
+}
+
+@media(max-width:1500px) {
+    #logo {
+        background-position: 65% 100%;
+        padding-bottom: 0
+    }
+}
+
+@media(max-width:992px) {
+    .learn-work .btn-trans {
+        width: auto
+    }
+    .logo-add p {
+        font-size: 17px;
+        color: #1b95e0;
+        padding: 0 0
+    }
+    .tutorial {
+        padding-top: 0
+    }
+}
+
+@media(max-width:767px) {
+    .learn-work .btn-trans {
+        width: auto;
+        font-size: 16px
+    }
+    .gray-box1 .btn-trans,
+    h4 {
+        font-size: 16px
+    }
+    .btn-trans {
+        width: 90%;
+        font-size: 16px
+    }
+}
+
+.underline {
+    text-decoration: underline
+}
+
+.hcenter {
+    text-align: center
+}
+
+.hwidth70 {
+    width: 70%
+}
+
+.hline7 {
+    line-height: 7px
+}
+
+.normalgreytext {
+    color: #666;
+    font-size: 16px
+}
+
+.checkspan {
+    display: inline;
+    line-height: 30px;
+    font-size: 20px;
+    height: 20px;
+    padding: 0
+}
+
+.htutorialdiv {
+    padding-left: 34px
+}
+
+.hleft {
+    text-align: left
+}
+
+.hinline {
+    display: inline
+}
+
+.hnomargin {
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+.helpmenutopic {
+    color: #444;
+    font-size: 19px;
+    font-weight: 700
+}
+
+.helpcheckboximg {
+    width: 15px;
+    height: 17px;
+    cursor: pointer;
+    padding-bottom: 2px
+}
+
+.helpimg {
+    max-width: 453px;
+    height: auto;
+    width: 100%;
+    border: 0
+}
+
+.helpimg2 {
+    max-width: 394px;
+    height: auto;
+    width: 100%;
+    border: 0
+}
+
+.helpslidetable {
+    border: 0;
+    width: 760px
+}
+
+.helpslidelefttd {
+    width: 271px;
+    vertical-align: top;
+    padding-top: 28px
+}
+
+.helpsliderighttd {
+    width: 469px;
+    vertical-align: top;
+    padding-top: 14px
+}
+
+.helpslidelefttd2 {
+    width: 341px;
+    vertical-align: top;
+    padding-top: 28px
+}
+
+.helpsliderighttd2 {
+    width: 399px;
+    vertical-align: top;
+    padding-top: 14px
+}
+
+a.feat:link {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.feat:visited {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.feat:hover {
+    color: #f59c10;
+    text-decoration: none
+}
+
+.tuh3 {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #f59c10;
+    font-size: 20px
+}
+
+.tutorialhr {
+    margin-top: 8px;
+    margin-bottom: 10px
+}
+
+.hmarginl15 {
+    margin-left: 15px
+}
+
+.tutorialbutton {
+    padding: 3px;
+    display: inline-block;
+    text-align: center;
+    width: 124px;
+    height: 28px;
+    background-image: url(https://cdn.livesudoku.com/helpart/nextprevbutton.png);
+    background-repeat: no-repeat
+}
+
+.toplink {
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.toplink:hover {
+    color: #666
+}
+
+a.toplink:link {
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.toplink:visited {
+    color: #f59c10;
+    font-weight: 400;
+    text-decoration: underline
+}
+
+a.toplink:hover {
+    color: #666;
+    text-decoration: underline
+}
+
+.hline8 {
+    line-height: 8px
+}
+
+.htutoriallink1 {
+    font-size: 17px;
+    color: #1895e0;
+    text-decoration: underline
+}
+
+.htutoriallink2 {
+    font-size: 17px;
+    color: #1895e0;
+    text-decoration: underline
+}
+
+.horange {
+    color: #5f9c10
+}
+
+.largeorangetext {
+    color: #f59c10;
+    font-size: 23px
+}
+
+.boldlargeorangetext {
+    color: #f59c10;
+    font-size: 23px;
+    font-weight: 700
+}
+
+.normalorangetext {
+    color: #f59c10;
+    font-size: 18px
+}
+
+.boldnormalorangetext {
+    color: #f59c10;
+    font-size: 18px;
+    font-weight: 700
+}
+
+.clicknormalgreytext {
+    color: #666;
+    font-size: 18px;
+    cursor: pointer
+}
+
+.clicknormalgreytext:hover {
+    color: #f59c10
+}
+
+.smallgreytext {
+    color: #666;
+    font-size: 16px
+}
+
+.smallorangetext {
+    color: #f59c10;
+    font-size: 16px
+}
+
+.clicksmallgreytext {
+    color: #666;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.clicksmallgreytext:hover {
+    color: #f59c10
+}
+
+.clicksmallorangetext {
+    color: #f59c10;
+    font-size: 16px;
+    cursor: pointer
+}
+
+.clicksmallorangetext:hover {
+    color: #666
+}
+
+.clicknormalorangetext {
+    color: #f59c10;
+    font-size: 18px
+}
+
+.clicknormalorangetext:hover {
+    color: #666
+}
+
+.largegreytext {
+    color: #666;
+    font-size: 23px
+}
+
+.margin0 {
+    margin-bottom: 0
+}
+
+.halignrtl {
+    text-align: right;
+    direction: rtl
+}
+
+.halignltr {
+    text-align: left;
+    direction: ltr
+}
+
+.paginationstyle {
+    font-size: 15px
+}
+
+.paginationstyle a {
+    text-decoration: none;
+    color: #666
+}
+
+.paginationstyle a.selected,
+.paginationstyle a:hover {
+    color: #000
+}
+
+.paginationstyle a.disabled,
+.paginationstyle a.disabled:hover {
+    color: #ccc;
+    cursor: default
+}
+
+.paginationstyle a.imglinks {
+    border: 0;
+    padding: 0
+}
+
+.paginationstyle a.imglinks img {
+    vertical-align: bottom;
+    border: 0
+}
+
+.paginationstyle a.imglinks a:hover {
+    background: 0 0
+}
+
+.paginationstyle .flatview a.selected,
+.paginationstyle .flatview a:hover {
+    color: #000;
+    background-color: #ff0
+}
+
+a.indexplaysinglelink:link {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.indexplaysinglelink:visited {
+    color: #666;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 18px
+}
+
+a.indexplaysinglelink:hover {
+    color: #f59c10;
+    text-decoration: none
+}
+
+.bg-statsplayrtl {
+    width: 22px;
+    height: 22px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -276px -301px
+}
+
+.bg-multisudoku {
+    width: 130px;
+    height: 155px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -10px -249px
+}
+
+.bg-singlesudoku {
+    width: 235px;
+    height: 219px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -10px -10px
+}
+
+.bg-singlesudokurtl {
+    width: 235px;
+    height: 219px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -265px -10px
+}
+
+.bg-facebooklogin {
+    width: 133px;
+    height: 32px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -160px -249px
+}
+
+.bg-flags_es {
+    width: 30px;
+    height: 16px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -363px -249px
+}
+
+.bg-flags_he {
+    width: 30px;
+    height: 16px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -413px -249px
+}
+
+.bg-flags_us {
+    width: 30px;
+    height: 16px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -463px -249px
+}
+
+.bg-learnicon {
+    width: 54px;
+    height: 54px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -160px -301px
+}
+
+.bg-multiicon {
+    width: 50px;
+    height: 56px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -10px -424px
+}
+
+.bg-singleicon {
+    width: 50px;
+    height: 56px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -80px -424px
+}
+
+.bg-statsplay {
+    width: 22px;
+    height: 22px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -234px -301px
+}
+
+.bg-statsicon {
+    width: 30px;
+    height: 25px;
+    background: url(https://cdn.livesudoku.com/artwork/css_sprites-min.png) -313px -249px
+}
+
+.img-responsive {
+    margin: auto
+}
+
+.font-size-17 {
+    font-size: 17px
+}
+
+.width-50-margin-auto {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 0 auto
+}
+
+.sudoku-fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: .35em;
+    padding-bottom: .625em;
+    padding-left: .75em;
+    padding-right: .75em;
+    border: 2px groove (internal value)
+}
+
+@media screen and (max-width: 430px) {
+    .space20 {
+        margin-top: 10px;
+    }
+}

@@ -30,3 +30,24 @@ document.getElementById('para').addEventListener('click', paraTemporizador2);
 document.getElementById('comienza').addEventListener('click', mensajes);
 
 alert('Bienvenido ' + localStorage.getItem('usuario'));
+
+
+
+let t;
+let contador = 5;
+
+const cada5segundos = () => {
+    alert('han pasado 5 segundos');
+    if (contador <= 0) {
+        clearInterval(t);
+    } else {
+        contador--;
+    }
+};
+
+const hazInterval = evento => {
+    evento.preventDefault();
+    t = setInterval(cada5segundos, 5000);
+};
+
+document.getElementById('interval').addEventListener('click', hazInterval);

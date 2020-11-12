@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="css/sudoku.css">
+</head>
+
+<body>
+    <div class="topgridmsg hidden-xs" id="topgridmsg">¡Buena suerte!</div>
+    <div id="playarea" dir="ltr" class="nouserselect" align="center">
+        <table dir="ltr" id="playtable" cellspacing="0" cellpadding="0" border="0" align="center">
+            <colgroup>
+                <col class="sudokucell45">
+                <col class="sudokucell43">
+                <col class="sudokucell43">
+                <col class="sudokucell44">
+                <col class="sudokucell43">
+                <col class="sudokucell43">
+                <col class="sudokucell44">
+                <col class="sudokucell43">
+                <col class="sudokucell46">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td id="td0" class="cellnormal">&nbsp;</td>
+                    <td id="td1" class="cellnormal">&nbsp;</td>
+                    <td id="td2" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td3" class="cellnormal" style="border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td4" class="cellnormal">&nbsp;</td>
+                    <td id="td5" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td6" class="cellnormal" style="border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td7" class="cellnormal">&nbsp;</td>
+                    <td id="td8" class="cellnormal">6
+                    </td>
+                </tr>
+                <tr>
+                    <td id="td9" class="cellnormal">9
+                    </td>
+                    <td id="td10" class="cellnormal">&nbsp;</td>
+                    <td id="td11" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td12" class="cellnormal" style="border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td13" class="cellnormal">5
+                    </td>
+                    <td id="td14" class="cellnormal" style="border-right: 2px solid blue;">4
+                    </td>
+                    <td id="td15" class="cellnormal" style="border-left: 2px solid blue;">3
+                    </td>
+                    <td id="td16" class="cellnormal">8
+                    </td>
+                    <td id="td17" class="cellnormal">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id="td18" class="cellnormal" style="border-bottom: 2px solid blue;">4
+                    </td>
+                    <td id="td19" class="cellnormal" style="border-bottom: 2px solid blue;">5
+                    </td>
+                    <td id="td20" class="cellnormal" style="border-bottom: 2px solid blue; border-right: 2px solid blue;">3
+                    </td>
+                    <td id="td21" class="cellnormal" style="border-bottom: 2px solid blue; border-left: 2px solid blue;">8
+                    </td>
+                    <td id="td22" class="cellnormal" style="border-bottom: 2px solid blue;">1
+                    </td>
+                    <td id="td23" class="cellnormal" style="border-bottom: 2px solid blue; border-right: 2px solid blue;">6
+                    </td>
+                    <td id="td24" class="cellnormal" style="border-bottom: 2px solid blue; border-left: 2px solid blue;">9
+                    </td>
+                    <td id="td25" class="cellnormal" style="border-bottom: 2px solid blue;">&nbsp;</td>
+                    <td id="td26" class="cellnormal" style="border-bottom: 2px solid blue;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id="td27" class="cellnormal" style="border-top: 2px solid blue;">&nbsp;</td>
+                    <td id="td28" class="cellnormal" style="border-top: 2px solid blue;">&nbsp;</td>
+                    <td id="td29" class="cellnormal" style="border-top: 2px solid blue; border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td30" class="cellnormal" style="border-top: 2px solid blue; border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td31" class="cellnormal" style="border-top: 2px solid blue;">&nbsp;</td>
+                    <td id="td32" class="cellnormal" style="border-top: 2px solid blue; border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td33" class="cellnormal" style="border-top: 2px solid blue; border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td34" class="cellnormal" style="border-top: 2px solid blue;">5
+                    </td>
+                    <td id="td35" class="cellnormal" style="border-top: 2px solid blue;">4
+                    </td>
+                </tr>
+                <tr>
+                    <td id="td36" class="cellnormal">5
+                    </td>
+                    <td id="td37" class="cellnormal">4
+                    </td>
+                    <td id="td38" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td39" class="cellnormal" style="border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td40" class="cellnormal">&nbsp;</td>
+                    <td id="td41" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td42" class="cellnormal" style="border-left: 2px solid blue;">7
+                    </td>
+                    <td id="td43" class="cellnormal">&nbsp;</td>
+                    <td id="td44" class="cellnormal">3
+                    </td>
+                </tr>
+                <tr>
+                    <td id="td45" class="cellnormal" style="border-bottom: 2px solid blue;">&nbsp;</td>
+                    <td id="td46" class="cellnormal" style="border-bottom: 2px solid blue;">&nbsp;</td>
+                    <td id="td47" class="cellnormal" style="border-bottom: 2px solid blue; border-right: 2px solid blue;">2
+                    </td>
+                    <td id="td48" class="cellnormal" style="border-bottom: 2px solid blue; border-left: 2px solid blue;">9
+                    </td>
+                    <td id="td49" class="cellnormal" style="border-bottom: 2px solid blue;">&nbsp;</td>
+                    <td id="td50" class="cellnormal" style="border-bottom: 2px solid blue; border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td51" class="cellnormal" style="border-bottom: 2px solid blue; border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td52" class="cellnormal" style="border-bottom: 2px solid blue;">&nbsp;</td>
+                    <td id="td53" class="cellnormal" style="border-bottom: 2px solid blue;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id="td54" class="cellnormal" style="border-top: 2px solid blue;">&nbsp;</td>
+                    <td id="td55" class="cellnormal" style="border-top: 2px solid blue;">&nbsp;</td>
+                    <td id="td56" class="cellnormal" style="border-top: 2px solid blue; border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td57" class="cellnormal" style="border-top: 2px solid blue; border-left: 2px solid blue;">5
+                    </td>
+                    <td id="td58" class="cellnormal" style="border-top: 2px solid blue;">9
+                    </td>
+                    <td id="td59" class="cellnormal" style="border-top: 2px solid blue; border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td60" class="cellnormal" style="border-top: 2px solid blue; border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td61" class="cellnormal" style="border-top: 2px solid blue;">7
+                    </td>
+                    <td id="td62" class="cellnormal" style="border-top: 2px solid blue;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id="td63" class="cellnormal">&nbsp;</td>
+                    <td id="td64" class="cellnormal">&nbsp;</td>
+                    <td id="td65" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td66" class="cellnormal" style="border-left: 2px solid blue;">6
+                    </td>
+                    <td id="td67" class="cellnormal">&nbsp;</td>
+                    <td id="td68" class="cellnormal" style="border-right: 2px solid blue;">2
+                    </td>
+                    <td id="td69" class="cellnormal" style="border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td70" class="cellnormal">&nbsp;</td>
+                    <td id="td71" class="cellnormal">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id="td72" class="cellnormal">&nbsp;</td>
+                    <td id="td73" class="cellnormal">2
+                    </td>
+                    <td id="td74" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td75" class="cellnormal" style="border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td76" class="cellnormal">&nbsp;</td>
+                    <td id="td77" class="cellnormal" style="border-right: 2px solid blue;">&nbsp;</td>
+                    <td id="td78" class="cellnormal" style="border-left: 2px solid blue;">&nbsp;</td>
+                    <td id="td79" class="cellnormal">1
+                    </td>
+                    <td id="td80" class="cellnormal">8
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><button id="nuevoSudoku">Haz un sudoku nuevo</button></p>
+    <script src="js/sudoku.js"></script>
+</body>
+
+</html>
