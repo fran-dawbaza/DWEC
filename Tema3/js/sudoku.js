@@ -109,3 +109,11 @@ class Sudoku {
 const miSudoku = new Sudoku();
 
 miSudoku.muestra();
+
+function nuevoSudoku(evento) {
+    evento.preventDefault();
+    miSudoku.nuevo();
+    miSudoku.muestra();
+}
+
+document.getElementById('nuevoSudoku').addEventListener('click', nuevoSudoku);
