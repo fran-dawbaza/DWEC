@@ -116,4 +116,19 @@ function nuevoSudoku(evento) {
     miSudoku.muestra();
 }
 
+
+let celdaUltimoFoco = -1;
+
+function clickEnTabla(evento) {
+    console.log("click en el id: " + evento.target.id);
+    console.log("último foco en " + celdaUltimoFoco);
+    if (celdaUltimoFoco != -1) {
+        document.getElementById(celdaUltimoFoco).classList.remove("gamehighlighttd");
+    }
+    evento.target.classList.add("gamehighlighttd");
+    celdaUltimoFoco = evento.target.id;
+}
+
 document.getElementById('nuevoSudoku').addEventListener('click', nuevoSudoku);
+
+document.getElementById('playtable').addEventListener('click', clickEnTabla);
