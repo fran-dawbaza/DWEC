@@ -1,20 +1,111 @@
-// const sudoku =
+class Sudoku {
+    constructor(mezclas = 30) {
+        this.datos = [
+            1, 1, 1, 1, 1, 1, 1, 1, 1,
+            2, 2, 2, 2, 2, 2, 2, 2, 2,
+            3, 3, 3, 3, 3, 3, 3, 3, 3,
+            4, 4, 4, 4, 4, 4, 4, 4, 4,
+            5, 5, 5, 5, 5, 5, 5, 5, 5,
+            6, 6, 6, 6, 6, 6, 6, 6, 6,
+            7, 7, 7, 7, 7, 7, 7, 7, 7,
+            8, 8, 8, 8, 8, 8, 8, 8, 8,
+            9, 9, 9, 9, 9, 9, 9, 9, 9
+        ];
+        this.nuevo(mezclas);
+    }
+    intercambiaFila(i = 10) {
+        switch (i) {
+            case 0:
+                this.cambiaFilas(1, 2);
+                break;
+            case 1:
+                this.cambiaFilas(0, 2);
+                break;
+            case 2:
+                this.cambiaFilas(0, 1);
+                break;
+            case 3:
+                this.cambiaFilas(4, 5);
+                break;
+            case 4:
+                this.cambiaFilas(3, 5);
+                break;
+            case 5:
+                this.cambiaFilas(3, 4);
+                break;
+            case 6:
+                this.cambiaFilas(7, 8);
+                break;
+            case 7:
+                this.cambiaFilas(6, 8);
+                break;
+            case 8:
+                this.cambiaFilas(6, 7);
+                break;
+            default:
+                this.intercambiaFila(Math.floor(Math.random() * 9));
+                break;
+        }
+    }
 
-// leer el contenido de una celda, por ejemplo td23
+    cambiaFilas(a, b) {
+        // debes implementar este código
+    }
 
+    intercambiaColumna(i = 10) {
+        switch (i) {
+            case 0:
+                this.cambiaColumnas(1, 2);
+                break;
+            case 1:
+                this.cambiaColumnas(0, 2);
+                break;
+            case 2:
+                this.cambiaColumnas(0, 1);
+                break;
+            case 3:
+                this.cambiaColumnas(4, 5);
+                break;
+            case 4:
+                this.cambiaColumnas(3, 5);
+                break;
+            case 5:
+                this.cambiaColumnas(3, 4);
+                break;
+            case 6:
+                this.cambiaColumnas(7, 8);
+                break;
+            case 7:
+                this.cambiaColumnas(6, 8);
+                break;
+            case 8:
+                this.cambiaColumnas(6, 7);
+                break;
+            default:
+                this.cambiaColumnas(Math.floor(Math.random() * 9));
+                break;
+        }
+    }
 
+    cambiaColumnas(a, b) {
+        // debes implementar este código
+    }
 
-function dimeCelda(i) {
-    return document.getElementById('td' + i).innerText;
+    nuevo(mezclas = 30) {
+        for (let i = 0; i < mezclas; i++) {
+            this.intercambiaFila();
+            this.intercambiaColumna();
+        }
+    }
+
+    muestra() {
+        for (let i = 0; i < 81; i++) {
+            document.getElementById('td' + i).innerText = this.datos[i];
+        }
+    }
 }
 
-console.log(dimeCelda(22));
-console.log(dimeCelda(23));
-console.log(dimeCelda(24));
 
-function ponEnCelda(i, valor) {
-    document.getElementById('td' + i).innerText = valor;
-}
+const miSudoku = new Sudoku();
 
-ponEnCelda(24, 7);
-console.log(dimeCelda(24));
+miSudoku.muestra();
