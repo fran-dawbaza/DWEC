@@ -690,7 +690,8 @@ a.indexplaymultilink:hover {
     font-size: 18px;
     cursor: pointer;
     text-align: center;
-    vertical-align: middle
+    vertical-align: middle;
+    background-color: rgb(56, 248, 248);
 }
 
 .gamehighlighttd:hover {
