@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de estilos y clases CSS con ES6</title>
+</head>
+
+<body>
+    <h1>Cambio de estilos y clases CSS con ES6</h1>
+    <p>Tenemos dos formas de trabajar los estilos, a través del acceso a la propiedad "style" en los objetos HTML, o a través de la lista de clases asignadas a los objetos html</p>
+    <p>Ejemplo de acceso a style:<br><code>
+        document.getElementById("p2").style.color = "blue";</code></p>
+    <p>Esta forma te obliga a conocer css a fondo y es muy tedioso. Pero para poder trabajar cómodamente y usar las hojas de estilos de un proyecto web, lo podemos hacer mejor modificando la lista de clases de un objeto HTML, veamos los ejemplos obtenidos
+        de:
+    </p>
+    <p><a href="https://developer.mozilla.org/es/docs/Web/API/Element/classList">https://developer.mozilla.org/es/docs/Web/API/Element/classList</a></p>
+    <p><code><pre>
+        // div es una referencia de objeto al elemento div de HTML con class="foo bar"
+        div.classList.remove("foo");
+        div.classList.add("anotherclass");
+        
+        // si visible está presente la elimina, de lo contrario la añade
+        div.classList.toggle("visible");
+        
+        // añadir/eliminar visible, dependiendo de la condición, i menor que 10
+        div.classList.toggle("visible", i < 10 );
+        
+        alert(div.classList.contains("foo"));
+        
+        // añadir o eliminar varias clases
+        div.classList.add("foo", "bar");
+        div.classList.remove("foo", "bar");
+        
+        // reemplazar la clase "foo" por "bar"
+        div.classList.replace("foo", "bar");</pre></code></p>
+    <p>Más info en <a href="https://www.w3schools.com/jsref/prop_element_classlist.asp">https://www.w3schools.com/jsref/prop_element_classlist.asp</a></p>
+</body>
+
+</html>

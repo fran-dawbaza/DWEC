@@ -120,6 +120,8 @@ function nuevoSudoku(evento) {
 let celdaUltimoFoco = -1;
 
 function clickEnTabla(evento) {
+    if (evento.target.id.charAt(0) != 't' || evento.target.id.charAt(1) != 'd')
+        return;
     console.log("click en el id: " + evento.target.id);
     console.log("último foco en " + celdaUltimoFoco);
     if (celdaUltimoFoco != -1) {
