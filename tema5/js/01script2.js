@@ -1,4 +1,4 @@
-console.log('Se está cargando 01script2.js');
+//console.log('Se está cargando 01script2.js');
 
 const retardo = (ms) => {
     const idUnico = 'sleep_' + Math.random().toString(36).slice(2);
@@ -11,5 +11,5 @@ const retardo = (ms) => {
 
 //console.log('Se ha cargado 01script2.js');
 
-retardo(2000);
+//retardo(2000);
 
