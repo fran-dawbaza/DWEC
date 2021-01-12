@@ -1,30 +1,35 @@
-const sleep = (ms) => {
-    const idUnico = 'sleep_' + Math.random().toString(36).slice(2);
-    console.log(`${idUnico} dormirá un mínimo de ${ms} ms`);
-    console.time(idUnico);
-    setTimeout((id) => {
-        console.timeEnd(id);
-    }, ms, idUnico)
-};
-
+function loadScript(src) {
+    // crea una etiqueta <script> y la agrega a la página
+    // esto hace que el script dado: src comience a cargarse y ejecutarse cuando se complete
+    let script = document.createElement('script');
+    script.src = src;
+    document.head.append(script);
+  }
+/*
 const uno = () => {
-    console.log('Uno');
+    console.log('Dentro de uno()');
 };
 
 const dos = () => {
-    console.log('Dos');
+    console.log('Dentro de dos()');
     tres();
+    console.log('Dentro de dos(), después de llamar a tres()');
 };
 
 const tres = () => {
-    console.log('Tres');
+    retardo(0);
+    console.log('Dentro de tres()');
 };
+*/
 
-
+loadScript('./js/01script2.js');
+/*
 uno();
-sleep(300);
+retardo(300);
 dos();
-sleep(500);
+retardo(500);
+*/
+
 
 
 /*let cont = 0;
