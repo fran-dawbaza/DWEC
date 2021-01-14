@@ -31,6 +31,7 @@ const procesamosDatos = xhr => {
     } else { // muestra el resultado
         alert(`Hecho, obtenidos ${xhr.response.length} bytes`); // Respuesta del servidor
         console.log(xhr.response);
+        //console.log(this.response);
     }
 }
 
