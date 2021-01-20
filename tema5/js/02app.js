@@ -7,6 +7,7 @@ const peticionAjaxGET = (url, cb) => {
 
     // 3. Esto se llamará después de que la respuesta se reciba
     // pero lo programamos ya
+
     xhr.addEventListener('load', () => { cb(xhr) });
 
     /*xhr.addEventListener('progress', (event) => {
@@ -39,45 +40,82 @@ const procesamosDatos = xhr => {
 //peticionAjaxGET('https://jsonplaceholder.typicode.com/albums', procesamosDatos);
 
 const getNombreCompañia = id => {
-    /*const usuario = {
-        "id": 1,
-        "name": "Leanne Graham",
-        "username": "Bret",
-        "email": "Sincere@april.biz",
-        "address": {
-          "street": "Kulas Light",
-          "suite": "Apt. 556",
-          "city": "Gwenborough",
-          "zipcode": "92998-3874",
-          "geo": {
-            "lat": "-37.3159",
-            "lng": "81.1496"
-          }
-        },
-        "phone": "1-770-736-8031 x56442",
-        "website": "hildegard.org",
-        "company": {
-          "name": "Romaguera-Crona",
-          "catchPhrase": "Multi-layered client-server neural-net",
-          "bs": "harness real-time e-markets"
-        }
-      };*/
-    peticionAjaxGET(`https://jsonplaceholder.typicode.com/users/${id}`, xhr => {
-        if (xhr.status == 200) {
-            try {
-                const usuario = JSON.parse(xhr.response);
-                //const usuario = usuarios.find(usr => usr.id == id);
-                console.log(usuario["company"]["name"]);
-                console.log(usuario.company.name);
-            } catch {
-                throw "No se encontró el usuario";
+    peticionAjaxGET(`https://jsonplaceholder.typicode.com/users/${id}`,
+        xhr => {
+            if (xhr.status == 200) {
+                try {
+                    const usuario = JSON.parse(xhr.response);
+                    //const usuario = usuarios.find(usr => usr.id == id);
+                    //console.log(usuario["company"]["name"]);
+                    console.log(usuario.company.name);
+                } catch {
+                    throw `No se encontró el usuario ${id}`;
+                }
+            } else {
+                throw `No se encontró el usuario ${id}, error: ${xhr.status}`;
             }
-        } else {
-            throw `No se encontró la lista de usuarios: ${xhr.status}`;
-        }
 
-    });
+        })
 };
 
-getNombreCompañia(2);
-getNombreCompañia(20);
+
+//getNombreCompañia(2);
+//getNombreCompañia(20);
+
+
+
+const dameFotosDelUsuario = id => {
+    peticionAjaxGET(`https://jsonplaceholder.typicode.com/users/${id}/albums`,
+        xhr => {
+            if (xhr.status == 200) {
+                try {
+                    const albumes = JSON.parse(xhr.response);
+                    //const usuario = usuarios.find(usr => usr.id == id);
+                    //console.log(usuario["company"]["name"]);
+                    console.log(albumes);
+                    console.log(albumes.length);
+
+                    for (let album of albumes) {
+                        peticionAjaxGET(`https://jsonplaceholder.typicode.com/albums/${album.id}/photos`, xhr => {
+                            if (xhr.status == 200) {
+                                try {
+                                    const fotos = JSON.parse(xhr.response);
+                                    //const usuario = usuarios.find(usr => usr.id == id);
+                                    //console.log(usuario["company"]["name"]);
+                                    const fragmento = document
+                                        .createDocumentFragment();
+
+                                    const titulo = document
+                                        .createElement('H1');
+                                    titulo.appendChild(document.createTextNode(album.title));
+                                    fragmento.appendChild(titulo);
+
+                                    for (let foto of fotos) {
+                                        const img = document
+                                            .createElement('IMG');
+                                        img.setAttribute('src', foto.url);
+                                        fragmento.appendChild(img);
+                                    }
+                                    document
+                                        .getElementById('fotos')
+                                        .appendChild(fragmento);
+                                } catch {
+                                    throw `No se encontraron las fotos del álbum ${album.id}`;
+                                }
+                            } else {
+                                throw `No se encontraron las fotos del álbum ${album.id}, error: ${xhr.status}`;
+                            }
+                        });
+                    }
+
+                } catch {
+                    throw `No se encontraron albumes para el usuario ${id}`;
+                }
+            } else {
+                throw `No se encontraron albumes para el usuario ${id}, error: ${xhr.status}`;
+            }
+
+        })
+};
+
+dameFotosDelUsuario(2);
