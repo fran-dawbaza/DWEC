@@ -1,4 +1,4 @@
-// Vamos a trabaja con estos datos, obtenidos y simplificados de jsonplaceholder.typicode.com
+// Vamos a trabajar con estos datos, obtenidos y simplificados de jsonplaceholder.typicode.com
 /*
 Vamos a desglosar un objeto usuario como si fuese una base de datos en tercera forma normal, partimos de un objeto de ejemplo:
     {
