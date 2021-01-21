@@ -128,27 +128,33 @@ const companies = [{
 
 
 const dameUsuario = (id, cb) => {
-    const user = users.find(u => u.id === id);
-    if (!user) cb(new Error(`No se encontró el usuario con id ${id}`), null);
-    else {
-        cb(null, user);
-    }
+    setTimeout(() => {
+        const user = users.find(u => u.id === id);
+        if (!user) cb(new Error(`No se encontró el usuario con id ${id}`), null);
+        else {
+            cb(null, user);
+        }
+    }, 20);
 };
 
 const dameDireccion = (user, cb) => {
-    const address = addresses.find(a => a.id === user.addressId);
-    if (!address) cb(new Error(`No se encontró la dirección del usuario ${user.name}`), null);
-    else {
-        cb(null, address);
-    }
+    setTimeout(() => {
+        const address = addresses.find(a => a.id === user.addressId);
+        if (!address) cb(new Error(`No se encontró la dirección del usuario ${user.name}`), null);
+        else {
+            cb(null, address);
+        }
+    }, 3000);
 };
 
 const dameGeo = (address, cb) => {
-    const geo = geos.find(g => g.id === address.geoId);
-    if (!geo) cb(new Error(`No se encontró la localización de la dirección ${address.id}`), null);
-    else {
-        cb(null, geo);
-    }
+    setTimeout(() => {
+        const geo = geos.find(g => g.id === address.geoId);
+        if (!geo) cb(new Error(`No se encontró la localización de la dirección ${address.id}`), null);
+        else {
+            cb(null, geo);
+        }
+    }, 500);
 };
 
 const dameEmpresa = (user, cb) => {
@@ -160,7 +166,31 @@ const dameEmpresa = (user, cb) => {
 };
 
 
-dameUsuario(10, (err, user) => {
+dameUsuario(1, (err, user) => {
     if (err) throw err;
-    console.log(user);
+    //console.log(user);
+    dameDireccion(user, (er, address) => {
+        if (er) throw er;
+        //console.log({...user, address });
+        dameGeo(address, (e, geo) => {
+            if (e) throw e;
+            const address_geo = {...address, geo };
+            //console.log({...user, address_geo });
+            dameEmpresa(user, (err, company) => {
+                if (err) throw err;
+                console.log({...user, address_geo, company });
+            })
+        })
+    })
+
 });
+
+
+/* Algo así no funcionará con peticiones asíncronas:
+const dameTodo = id => {
+    const usr = dameUsuario(id);
+    const address = dameDireccion(usr.addressId);
+    const geo = dameGeo(address.geoId);
+    ...
+}
+*/

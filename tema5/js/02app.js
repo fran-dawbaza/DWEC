@@ -124,6 +124,7 @@ const dameFotosDelUsuario = id => {
 
 // Primero obtenemos los albumes
 const dameFotosDelUsuario_cb1 = xhr => {
+
     if (xhr.status == 200) {
         try {
             const albumes = JSON.parse(xhr.response);
@@ -131,12 +132,12 @@ const dameFotosDelUsuario_cb1 = xhr => {
             console.log(albumes.length);
             // Se puede deshacer el bucle for con llamadas recursivas para hacer una petición ajax después de que se termine la anterior
             // en lugar de todas casi a la vez como está ahora
-            /*for (let album of albumes) {
+            for (let album of albumes) {
                 // Segundo, para cada álbum obtenemos las fotos
                 peticionAjaxGET(`https://jsonplaceholder.typicode.com/albums/${album.id}/photos`, dameFotosDelUsuario_cb2, album);
-            }*/
+            }
             // comenta el bucle for anterior y descomenta la siguiente línea para que veas el funcionamiento del modo recursivo
-            peticionAjaxGET(`https://jsonplaceholder.typicode.com/albums/${albumes[0].id}/photos`, dameFotosDelUsuario_cb2_recursivo, albumes, 0);
+            //peticionAjaxGET(`https://jsonplaceholder.typicode.com/albums/${albumes[0].id}/photos`, dameFotosDelUsuario_cb2_recursivo, albumes, 0);
         } catch {
             throw `No se encontraron albumes para el usuario ${id}`;
         }
