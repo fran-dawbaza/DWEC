@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cierres/Closures</title>
+</head>
+
+<body>
+    <h1>Cierre (Closure)</h1>
+    <p>
+        Existe un término general de programación “closure” que los desarrolladores generalmente deben conocer.
+    </p>
+    Una clausura es una función que recuerda sus variables externas y puede acceder a ellas. En algunos lenguajes, eso no es posible, o una función debe escribirse de una manera especial para que suceda. Pero como se explicó anteriormente, en JavaScript,
+    todas las funciones son clausuras naturales (solo hay una excepción, que se cubrirá en La sintaxis "new Function").
+    <p>
+        Es decir: recuerdan automáticamente dónde se crearon utilizando una propiedad oculta su entorno [[Environment]], y luego su código puede acceder a las variables externas.
+    </p>
+    <p>
+        Cuando en una entrevista, un desarrollador frontend recibe una pregunta sobre “¿qué es una clausura?”, Una respuesta válida sería una definición de clausura y una explicación de que todas las funciones en JavaScript son clausuras, y tal vez algunas palabras
+        más sobre detalles técnicos: la propiedad [[Environment]] y cómo funcionan los entornos léxicos.
+    </p>
+    <p>En la consola puedes ver el resultado de ejecutar:</p>
+    <dir><pre>
+        const contador = inicio => {
+            let i = inicio;
+            return (() => {
+                return i++;
+            });
+        };
+        
+        const f = contador(10);
+        console.log('Inicio contador a 10 y llamo varias veces a f():');
+        console.log(f());
+        console.log(f());
+        console.log(f());
+        console.log(f());
+        console.log(f());
+        
+        const g = contador(1);
+        console.log('Inicio contador a 1 y llamo varias veces a g():');
+        console.log(g());
+        console.log(g());
+        console.log(g());
+        console.log(g());
+        console.log('Llamo a f():');
+        console.log(f());
+        console.log('Llamo a g():');
+        console.log(g());        
+    </pre></dir>
+    <p>Visita <a href="https://es.javascript.info/closure">https://es.javascript.info/closure</a> para más información</p>
+
+    <script src="js/04app.js"></script>
+</body>
+
+</html>
