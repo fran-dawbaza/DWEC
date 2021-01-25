@@ -265,3 +265,11 @@ dameUsuario(1)
     .then(user_address_geo => dameEmpresa(user_address_geo))
     .then(user_full => console.log(user_full))
     .catch(err => console.log(err));
+
+/* A tener en cuenta:
+- Cada then ejecuta un callback, a su vez cada then devuelve otra pomesa.
+- El argumento que recibe el callback de un then se obtiene del resolve(...) de la promesa de la que viene.
+
+-El catch captura el error de cualquier promesa anterior, de cualquier reject de la cadena
+
+*/
