@@ -31,14 +31,14 @@ Vamos a desglosar un objeto usuario como si fuese una base de datos en tercera f
 
 */
 const users = [{
-        "id": 1,
+        "id": 50,
         "name": "Leanne Graham",
         "username": "Bret",
         "email": "Sincere@april.biz",
         "addressId": 1,
         "phone": "1-770-736-8031 x56442",
         "website": "hildegard.org",
-        "companyId": 1
+        "companyId": 2
     },
     {
         "id": 2,
@@ -127,45 +127,55 @@ const companies = [{
 }];
 
 
-const dameUsuario = (id, cb) => {
-    setTimeout(() => {
-        const user = users.find(u => u.id === id);
-        if (!user) cb(new Error(`No se encontró el usuario con id ${id}`), null);
+const dameUsuario = (id) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const user = users.find(u => u.id === id);
+            if (!user) reject(new Error(`No se encontró el usuario con id ${id}`));
+            else {
+                resolve(user);
+            }
+        }, 20);
+    })
+};
+
+const dameDireccion = (user) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const address = addresses.find(a => a.id === user.addressId);
+            if (!address) reject(new Error(`No se encontró la dirección del usuario ${user.name}`));
+            else {
+                resolve({...user, address });
+            }
+        }, 3000);
+    })
+};
+
+const dameGeo = (user_address) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const geo = geos.find(g => g.id === user_address.address.geoId);
+            if (!geo) reject(new Error(`No se encontró la localización de la dirección ${user_address.address.id}`));
+            else {
+                user_address.address.geo = geo;
+                resolve(user_address);
+            }
+        }, 500);
+    })
+};
+
+const dameEmpresa = (user) => {
+    return new Promise((resolve, reject) => {
+        const company = companies.find(c => c.id === user.companyId);
+        if (!company) reject(new Error(`No se encontró la empresa del usuario ${user.name}`));
         else {
-            cb(null, user);
+            user.company = company;
+            resolve(user);
         }
-    }, 20);
+    })
 };
 
-const dameDireccion = (user, cb) => {
-    setTimeout(() => {
-        const address = addresses.find(a => a.id === user.addressId);
-        if (!address) cb(new Error(`No se encontró la dirección del usuario ${user.name}`), null);
-        else {
-            cb(null, address);
-        }
-    }, 3000);
-};
-
-const dameGeo = (address, cb) => {
-    setTimeout(() => {
-        const geo = geos.find(g => g.id === address.geoId);
-        if (!geo) cb(new Error(`No se encontró la localización de la dirección ${address.id}`), null);
-        else {
-            cb(null, geo);
-        }
-    }, 500);
-};
-
-const dameEmpresa = (user, cb) => {
-    const company = companies.find(c => c.id === user.companyId);
-    if (!company) cb(new Error(`No se encontró la empresa del usuario ${user.name}`), null);
-    else {
-        cb(null, company);
-    }
-};
-
-
+/*
 dameUsuario(1, (err, user) => {
     if (err) throw err;
     //console.log(user);
@@ -183,16 +193,10 @@ dameUsuario(1, (err, user) => {
         })
     })
 
-});
-
-
-
-
-/* Algo así no funcionará con peticiones asíncronas:
-const dameTodo = id => {
-    const usr = dameUsuario(id);
-    const address = dameDireccion(usr.addressId);
-    const geo = dameGeo(address.geoId);
-    ...
-}
-*/
+});*/
+dameUsuario(50)
+    .then(u => dameDireccion(u))
+    .then(u_d => dameGeo(u_d))
+    .then(u_d_g => dameEmpresa(u_d_g))
+    .then(todo => console.log(todo))
+    .catch(error => console.log(error));

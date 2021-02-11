@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<script>
+    /*
+                                    "use strict";
+                                    const peticionAjaxGET = (url, cb, ...args) => {
+                                        // 1. Crea un nuevo objeto XMLHttpRequest
+                                        const xhr = new XMLHttpRequest();
+                                        // 2. Configuración: solicitud GET, a pesar del nombre no se abre
+                                        // la petición aún  
+                                        xhr.open('GET', url);
+
+                                        // 3. Esto se llamará después de que la respuesta se reciba
+                                        // pero lo programamos ya
+
+                                        xhr.addEventListener('load', () => {
+                                            cb(xhr, ...args)
+                                        });
+
+                                        xhr.addEventListener('error', (err) => {
+                                            alert("Solicitud fallida!!! " + err);
+                                        });
+                                        // 4. Envía la solicitud a la red
+                                        xhr.send();
+                                        //return xhr;
+                                    };
+
+                                    function httpClient(ruta, cb) {
+                                        const baseURL = 'https://jsonplaceholder.typicode.com/';
+                                        //return 
+                                        peticionAjaxGET(baseURL + ruta, cb);
+                                    }
+
+                                    // Así luce el callback hell
+
+                                    httpClient('users/1', user => {
+                                        const objUser = JSON.parse(user.response);
+                                        console.log(objUser);
+                                        httpClient('posts/' + objUser.id, post => {
+                                            const objPost = JSON.parse(post.response);
+                                            console.log(objPost);
+                                            httpClient('posts/' + objPost.id + '/coments/', function(comment) {
+                                                console.log(comment.response)
+                                            })
+                                        })
+                                    });*/
+
+    "use strict";
+    globalThis.__codeBoxId = "1gn15vo2ue";
+
+    let urls = [
+        'https://api.github.com/users/iliakan',
+        'https://api.github.com/users/remyetgrf',
+        'https://api.github.com/users/jeresig'
+    ];
+
+    // "mapear" cada url a la promesa de su fetch
+    let requests = urls.map(url => fetch(url));
+
+    // Promise.all espera hasta que todas la tareas estén resueltas
+    Promise
+        .all(requests)
+        .then(responses => {
+            console.log(requests[0]);
+            console.log(requests[1]);
+            console.log(requests[2]);
+            responses.forEach(
+                response => alert(`${response.url}: ${response.status}`)
+            )
+        })
+        .catch(e => alert('esto es el error: ' + e));
+</script>
