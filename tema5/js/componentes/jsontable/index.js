@@ -5,7 +5,7 @@ class JsonTable extends HTMLElement {
         this.rendered = false;
     }
     connectedCallback() {
-        if (!this.rendered) {
+        if (!this.rendered) { // Aún no se ha terminado el fetch en attributeChangedCallback, por lo que aún no se ha renderizado
             console.log('render llamado desde connected');
             //this.render();
         }
