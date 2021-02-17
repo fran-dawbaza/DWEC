@@ -12,6 +12,7 @@ class MyElement extends HTMLElement {
     connectedCallback() {
         // El navegador llama a este método cuando el elemento se añade al documento
         // Puede ser invocado varias veces si el elemento se añade varias veces
+        // Lo usuaremos sobre todo para definir los eventos asociados a nuestro elemento
     }
 
     disconnectedCallback() {
@@ -51,11 +52,15 @@ class MiSaludo extends HTMLElement {
     }
 
     connectedCallback() {
-        this.render();
+        if (!this.rendered) 
+            this.render();
+        this.colorAleatorio=this.colorAleatorio.bind(this);
+        this.contenido.addEventListener('click', this.colorAleatorio);
         console.log('MiSaludo añadido al documento');
     }
 
     disconnectedCallback() {
+        this.contenido.removeEventListener('click', this.colorAleatorio);
         console.log('MiSaludo eliminado del documento');
     }
 
@@ -68,6 +73,7 @@ class MiSaludo extends HTMLElement {
         console.log(`Ha cambiado ${name}, pasa de ${oldValue} a ${newValue}`);
         if (name === 'nombre') this.nombre = newValue;
         if (name === 'color') this.color = newValue;
+        this.rendered=true;
         this.render();
     }
 
@@ -76,8 +82,14 @@ class MiSaludo extends HTMLElement {
     }
 
     render() {
-        console.dir(this.contenido);
-        this.estilo.textContent = `div {
+        //console.dir(this.contenido);
+        this.estilo.textContent = `
+        :host {
+          display: inline-block;
+          border: 1px solid ${this.color};
+          padding: 10px;
+        }
+        div {
             color: ${this.color};
           }`;
         this.contenido.innerHTML = `
@@ -86,6 +98,20 @@ class MiSaludo extends HTMLElement {
         </h1>
         <slot></slot>`;
         console.log('MiSaludo vista actualzada');
+    }
+    colorAleatorio(e) {
+        //console.log(this);
+        const letras = ["a", "b", "c", "d", "e", "f", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+        let numero;
+        let color = '';
+
+        for (var i = 0; i < 6; i++) {
+            numero = (Math.random() * 15).toFixed(0);
+            color = color + letras[numero];
+        }
+        this.color = '#'+color;
+        //console.log(this.color);
+        this.render();
     }
 }
 
