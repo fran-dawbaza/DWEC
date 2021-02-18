@@ -6,16 +6,17 @@ class JsonTable extends HTMLElement {
     }
     connectedCallback() {
         if (!this.rendered) { // Aún no se ha terminado el fetch en attributeChangedCallback, por lo que aún no se ha renderizado
-            console.log('render llamado desde connected');
+            //console.log('render llamado desde connected');
             //this.render();
+            this.shadowRoot.innerHTML = '<img src="https://media.tenor.com/images/965beb93fefb499a174d45bfcef23c30/tenor.gif"/>';
         }
     }
 
     render() {
         //implementation
         let html = '<link rel="stylesheet" href="js/componentes/jsontable/styles.css"><table><thead><tr>';
-        console.log('datos[0]:' + Array.isArray(this.datos[0]));
-        console.log('datos:' + Array.isArray(this.datos));
+        //console.log('datos[0]:' + Array.isArray(this.datos[0]));
+        //console.log('datos:' + Array.isArray(this.datos));
         let primerObjeto;
         let arrayObjetos;
         if (Array.isArray(this.datos)) {
@@ -63,8 +64,14 @@ class JsonTable extends HTMLElement {
                 arrayObjetos = [obj];
             }
             return `
-            <button>-</button> ${Object.values(primerObjeto)[0]}
-            <table>
+            <button 
+                onclick=
+                "this.textContent==='+' ?
+                    this.textContent='-'
+                    :this.textContent='+';
+                this.nextElementSibling.classList.toggle('hidden')"
+            >+</button>${Object.values(primerObjeto)[0]}
+            <table class="hidden">
                 <thead>
                     <tr>
                         ${Object.keys(primerObjeto).map(key => `<th>${key}</th>`).join('')}
@@ -72,13 +79,14 @@ class JsonTable extends HTMLElement {
                 </thead>
                 <tbody>
                     ${arrayObjetos.map(
-                                        obj => `<tr>${
-                                                        Object.values(obj).map(
-                                                                                value => `<td>${typeof value === 'object' ? this.renderTable(value) : value}</td>`
-                                                                                ).join('')
-                                                    }
-                                                </tr>`
-                                        ).join('')
+                        obj => `<tr>${
+                            Object.values(obj).map(
+                                value => `<td>${
+        typeof value === 'object' ? this.renderTable(value) : value
+                                                }
+                                        </td>`).join('')
+                                    }
+                                </tr>`).join('')
                     }
                 </tbody>
             </table>`;
@@ -90,18 +98,44 @@ class JsonTable extends HTMLElement {
     }
 
     static get observedAttributes() {
-        return ['url'];
+        return ['url','data','img'];
     }
 
     async attributeChangedCallback(name, oldVal, newVal) {
         //implementation
+        if (name==='data') {
+            this.datosNombre=newVal;
+            if (this.datos && this.datos[this.datosNombre]) {
+                this.datos = this.datos[this.datosNombre];
+                this.datosRevisados=true;
+            }
+            else {
+                this.datosRevisados=false;
+            }
+            
+        }
         if (name==='url') {
             this.url = newVal;
-            const resultado = await fetch(newVal);
-            this.datos = await resultado.json();
-            console.log('render llamado desde attributeChaged');
-            this.render();
-            this.rendered=true;
+            await new Promise((resolve,reject)=>{
+                            setTimeout(()=>resolve('hola'),1000)
+                            });
+            
+            try {
+                const resultado = await fetch(newVal);
+                this.datos = await resultado.json();
+                //console.log('render llamado desde attributeChaged');
+
+                console.log(this.datosNombre + ' -> ' + this.datosRevisados);
+                if (!this.datosRevisados && this.datosNombre) {
+                    this.datos = this.datos[this.datosNombre];
+                    this.datosRevisados=true;                    
+                }
+                this.render();
+                this.rendered=true;
+            }
+            catch (e) {
+                console.log(e);
+            }
         }
     }
 
