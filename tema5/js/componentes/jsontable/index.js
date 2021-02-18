@@ -115,10 +115,10 @@ class JsonTable extends HTMLElement {
             
         }
         if (name==='url') {
-            this.url = newVal;
+            /*this.url = newVal;
             await new Promise((resolve,reject)=>{
                             setTimeout(()=>resolve('hola'),1000)
-                            });
+                            });*/
             
             try {
                 const resultado = await fetch(newVal);
@@ -146,3 +146,16 @@ class JsonTable extends HTMLElement {
 }
 
 window.customElements.define('json-table', JsonTable);
+
+
+class PretyButton extends HTMLButtonElement {
+    constructor(){
+        super();
+        
+    }
+    connectedCallback() {
+        this.textContent = 'Mi botón: ';
+    }
+};
+
+customElements.define('prety-button',PretyButton,{extends: 'button'});
