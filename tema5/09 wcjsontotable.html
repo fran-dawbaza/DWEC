@@ -12,13 +12,15 @@
     <h1>Vamos a hacer un componente para construir una tabla a partir de un objeto JSON</h1>
     <p>Ideas para implementar:</p>
     <ul>
-        <li>Calendario personalizado, con opciones: de poner hoja de estilo por atributo; tipo de calendario (español/inglés); de poner fecha para mostrar su mes; **de añadir eventos </li>
-        <li>Carrusel de imágenes, permitiendo: indicar el nombre del objeto JS que contiene las imágenes a motrar; añadirle subetiquetas que especifiquen la ruta de cada imagen, enlace, comentario; indicar también atributos para estilos: alto, ancho, ajuste de imágenes...</li>
-        <li>Tarjetas (Cards), permitiendo: elementos principales como imagen, título, descripción, enlace y estilos</li>
-        <li>Select</li>
-        <li>Barra progreso</li>
-        <li>Cambio de estilos (Nocturno/diurno/aumento o reducción de tamaño fuente ...) </li>
-        <li>Paginador de tablas grandes</li>
+        <li>Calendario personalizado, con opciones: de poner hoja de estilo por atributo; tipo de calendario (español/inglés); de poner fecha para mostrar su mes; **de añadir eventos --> F.Javier </li>
+        <li>Carrusel de imágenes, permitiendo: indicar el nombre del objeto JS que contiene las imágenes a motrar; añadirle subetiquetas que especifiquen la ruta de cada imagen, enlace, comentario; indicar también atributos para estilos: alto, ancho, ajuste de imágenes... --> Antonio</li>
+        <li>Tarjetas (Cards), permitiendo: elementos principales como imagen, título, descripción, enlace y estilos --> Ernesto</li>
+        <li>Select que se rellena a partir de una petición ayax --> Manuel, Laura</li>
+        <li>Barra progreso, mostrará el progreso de una petición XMLHttpRequest, con un atributo para indicar el nombre del objeto XHR. Otro atributo para indicar si está o no siempre visible -->Juanma </li>
+        <li>Cambio de estilos (Nocturno/diurno/aumento o reducción de tamaño fuente, cambio color de fuente, modo daltónico ...) --> Diego
+            </li>
+        <li>Paginador de tablas grandes / listas grandes</li>
+        <li>Mejor del web component json-table visto en clase --> Victor</li>
     </ul>
 
    
@@ -28,11 +30,17 @@
 
     <json-table url="https://reqres.in/api/users?page=2" data="data" img="avatar" btn=""></json-table>
 
-    <json-table url="https://jsonplaceholder.typicode.com/users/1/todos/"></json-table>
+    <json-table url="https://jsonplaceholder.typicode.com/users/1/todos/" btn-delete="https://jsonplaceholder.typicode.com/users/" 
+    delete-id="id"
+    btn-edit="https://jsonplaceholder.typicode.com/users/"
+    edit-fields="name,..."
+    btn-add="https://jsonplaceholder.typicode.com/users/"></json-table>
 
     <script src="js/componentes/jsontable/index.js"></script>
 
     <button is="prety-button">texto del botón</button>
+
+    <mi-select url="https://wewlkflf.com/API/PARAM/users/" param="otro_campo_del_formulario" option-value="id_1" option-text="text_1"></mi-select>
 
     <p>ahora la etiqueta directa:</p>
     <prety-button></prety-button>
