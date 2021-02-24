@@ -51,7 +51,7 @@
       padding: 8px 0;
       display: block;
     }
-    thead>tr, .row {
+    thead, thead>tr, .row {
         padding: 8px 0;
         display: block;
         background: #27ae60;
@@ -64,7 +64,7 @@
     display: table-cell;
   }
   @media screen and (max-width: 580px) {
-    td, .cell {
+    td,th, .cell {
       padding: 2px 12px;
       display: block;
     }
